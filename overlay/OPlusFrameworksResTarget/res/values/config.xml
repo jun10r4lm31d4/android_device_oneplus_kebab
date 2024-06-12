@@ -62,9 +62,9 @@
          screenBrightness * (1.0f - CONSTRAINT_VALUE). When the new screen brightness is lower than
          this threshold, it is applied. See the config_screenThresholdLevels description for how
          the constraint value is chosen. -->
-    <array name="config_screenDarkeningThresholds">
+    <integer-array name="config_screenDarkeningThresholds">
         <item>0</item>
-    </array>
+    </integer-array>
 
     <!-- Array of light sensor lux values to define our levels for auto backlight brightness support.
          The N entries of this array define N + 1 control points as follows:
@@ -203,73 +203,10 @@
          brightness modes but only the maximum brightness value obtainable in a sustainable manner.
 
          This array should be equal in size to config_screenBrightnessBacklight -->
-    <array name="config_screenBrightnessNits">
-        <item>0.0</item>
-        <item>2.1</item>
-        <item>2.31</item>
-        <item>2.63</item>
-        <item>3.16</item>
-        <item>3.73</item>
-        <item>4.42</item>
-        <item>5.45</item>
-        <item>6.69</item>
-        <item>8.07</item>
-        <item>9.65</item>
-        <item>11.32</item>
-        <item>13.26</item>
-        <item>15.59</item>
-        <item>18.14</item>
-        <item>20.68</item>
-        <item>23.58</item>
-        <item>26.38</item>
-        <item>29.67</item>
-        <item>32.83</item>
-        <item>36.03</item>
-        <item>39.31</item>
-        <item>43.8</item>
-        <item>47.95</item>
-        <item>52.08</item>
-        <item>56.86</item>
-        <item>61.83</item>
-        <item>67.93</item>
-        <item>73.37</item>
-        <item>79.96</item>
-        <item>86.15</item>
-        <item>90.75</item>
-        <item>97.83</item>
-        <item>105.67</item>
-        <item>112.79</item>
-        <item>120.33</item>
-        <item>127.82</item>
-        <item>135.71</item>
-        <item>145.0</item>
-        <item>153.32</item>
-        <item>161.78</item>
-        <item>170.61</item>
-        <item>179.7</item>
-        <item>190.25</item>
-        <item>201.81</item>
-        <item>212.07</item>
-        <item>222.79</item>
-        <item>234.01</item>
-        <item>246.43</item>
-        <item>257.49</item>
-        <item>269.8</item>
-        <item>281.41</item>
-        <item>293.94</item>
-        <item>307.58</item>
-        <item>322.53</item>
-        <item>335.82</item>
-        <item>349.68</item>
-        <item>364.86</item>
-        <item>379.57</item>
-        <item>398.55</item>
-        <item>413.85</item>
-        <item>429.97</item>
-        <item>442.89</item>
-        <item>461.76</item>
-        <item>478.65</item>
-    </array>
+    <integer-array name="config_screenBrightnessNits">
+        <item>1</item>
+        <item>1100</item>
+    </integer-array>
 
     <!-- An array describing the screen's backlight values corresponding to the brightness
          values in the config_screenBrightnessNits array.
@@ -278,18 +215,6 @@
     <integer-array name="config_screenBrightnessBacklight">
         <item>1</item>
         <item>255</item>
-    </integer-array>
-
-    <!-- An array of floats describing the screen brightness in nits corresponding to the backlight
-         values in the config_screenBrightnessBacklight array.  On OLED displays these  values
-         should be measured with an all white image while the display is in the fully on state.
-         Note that this value should *not* reflect the maximum brightness value for any high
-         brightness modes but only the maximum brightness value obtainable in a sustainable manner.
-
-         This array should be equal in size to config_screenBrightnessBacklight -->
-    <integer-array name="config_screenBrightnessNits">
-        <item>1</item>
-        <item>1100</item>
     </integer-array>
 
     <!-- Array of hysteresis constraint values for darkening, represented as tenths of a
